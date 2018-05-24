@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>USER SEND</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/userSend.js"></script>
+</head>
+
+
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/add_friend}" th:object="${user}" method="post" >
+    <p>Username: <input type="text" th:field="*{username}" /></p>
+    <td th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</td>
+
+    <p><input type="submit" id = "create" value="Submit" /> <input type="reset" value="Reset" /></p>
+
+
+</form>
+</body>
+</html>

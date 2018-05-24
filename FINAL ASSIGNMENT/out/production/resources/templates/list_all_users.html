@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<!--     <p th:text="${ bookDtoList }" /> -->
+
+<table>
+    <tbody>
+    <th><td >ID
+    </td>
+
+    <td>Username</td>
+    <td>Password</td>
+    <td>Address</td>
+    <td>Age</td>
+    <td>Role</td>
+    </th>
+    <tr th:each="user : ${ users }">
+        <td><img src="users/image.html?id = ${user.id}" alt = "image not found"/></td>
+        <td th:text="${ user.username }">Username</td>
+        <td th:text="${ user.password}">Password</td>
+        <td th:text="${ user.address }">Address</td>
+        <td th:text="${ user.age}">Age</td>
+        <td th:text="${ user.role}">Role</td>
+        <td th:text="${ user.icon}">Role</td>
+
+        <td>
+            <form action="#" th:action="@{/list_all_users_friends}" method="post">
+                <input type="hidden" th:value = "${user.username}" name="username" />
+                <p><input type="submit" class="button" value="LIST USER'S FRIENDS" name="LIST USER'S FRIENDS" />
+            </form>
+
+        </td>
+
+
+    </tr>
+    </tbody>
+</table>
+
+<form action="#" th:action="@{/user}" method="get">
+    <p><input type="submit" class="button" value="USER PAGE" name="USER PAGE" />
+</form>
+
+</body>
+</html>

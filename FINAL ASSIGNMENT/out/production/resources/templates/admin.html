@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>ADMIN PAGE</h1>
+
+<form action="#" th:action="@{/add_user}" method="get">
+    <p><input type="submit" class="button" value="ADD USER" name="ADD USER" />
+</form>
+<form action="#" th:action="@{/delete_user}" method="get">
+    <p><input type="submit" class="button" value="DELETE USER" name="DELETE USER" />
+</form>
+<form action="#" th:action="@{/update_user}" method="get">
+    <p><input type="submit" class="button" value="UPDATE USER" name="UPDATE USER" />
+</form>
+<form action="#" th:action="@{/list_all_users_admin}" method="get">
+    <p><input type="submit" class="button" value="LIST ALL USERS" name="LIST ALL USERS" />
+</form>
+
+<form action="#" th:action="@{/logout}" method="get">
+    <p><input type="submit" class="button" value="LOGOUT" name="LOGOUT" />
+</form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Form</h1>
+<form action="#" th:action="@{/add_user}" th:object="${user}" method="post" >
+    <p>Address: <input type="text" th:field="*{address}" /></p>
+    <td th:if="${#fields.hasErrors('address')}" th:errors="*{address}">Address Error</td>
+
+    <p>Age: <input type="text" th:field="*{age}" /></p>
+    <td th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Age Error</td>
+
+    <p>Password: <input type="text" th:field="*{password}" /></p>
+    <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</td>
+
+    <p>Username: <input type="text" th:field="*{username}" /></p>
+    <td th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Username Error</td>
+
+    <p>Role: <input type="text" th:field="*{role}" /></p>
+    <td th:if="${#fields.hasErrors('role')}" th:errors="*{role}">Password Error</td>
+
+
+
+    <p>Privacy: <input type="checkbox" th:field="*{privacy}" /></p>
+    <td th:if="${#fields.hasErrors('privacy')}" th:errors="*{privacy}">Privacy Error</td>
+
+
+
+
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+
+</form>
+</body>
+</html>

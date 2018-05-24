@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Result</h1>
+<p th:text="'address: ' + ${user.address}" />
+<p th:text="'age: ' + ${user.age}" />
+<p th:text="'password: ' + ${user.password}" />
+<p th:text="'username: ' + ${user.username}" />
+<p th:text="'role: ' + ${user.role}" />
+<p th:text="'privacy: ' + ${user.privacy}" />
+
+<form action="#" th:action="@{/admin}" method="get">
+    <p><input type="submit" class="button" value="ADMIN PAGE" name="ADMIN PAGE" />
+</form>
+
+</body>
+</html>

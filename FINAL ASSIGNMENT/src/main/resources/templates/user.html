@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<h1>USER PAGE</h1>
+
+
+<td><img th:src="@{resources/templates/first.jpg}" alt = "image not found"/></td>
+
+
+<form action="#" th:action="@{/add_friend}" method="get">
+    <p><input type="submit" class="button" value="ADD FRIEND" name="ADD FRIEND" />
+</form>
+
+
+<form action="#" th:action="@{/list_all_friends}" method="get">
+    <p><input type="submit" class="button" value="LIST ALL FRIENDS" name="LIST ALL FRIENDS" />
+</form>
+
+<form action="#" th:action="@{/remove_friend}" method="get">
+    <p><input type="submit" class="button" value="REMOVE FRIEND" name="REMOVE FRIEND" />
+</form>
+
+
+
+
+</body>
+</html>
